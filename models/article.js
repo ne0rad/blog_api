@@ -7,7 +7,7 @@ var ArticleSchema = new Schema({
     date: { type: Date, required: true }
 });
 
-ArticleSchema.virtual('delete_url')
+ArticleSchema.virtual('url')
     .get(function () {
         return 'article/' + this._id;
     });

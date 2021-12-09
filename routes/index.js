@@ -8,7 +8,7 @@ var commentController = require('../controllers/commentController');
 // Article routes
 router.get('/articles', cache("10 seconds"), articleController.all_articles_get);
 router.post('/post_article', articleController.article_post);
-router.get('/articles/:id', cache("10 minutes"), articleController.article_get);
+router.get('/articles/:id', articleController.article_get);
 router.put('/articles/:id', articleController.article_put);
 router.delete('/articles/:id', articleController.article_delete);
 

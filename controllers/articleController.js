@@ -3,21 +3,24 @@ var Article = require('../models/article');
 
 exports.all_articles_get = function (req, res, next) {
     Article.find({})
-        .sort({date: -1})
+        .sort({ date: -1 })
         .exec((err, result) => {
-            if(err) return next(err);
+            if (err) return next(err);
             res.json(result);
         });
 }
 
 exports.article_get = function (req, res, next) {
-    res.send('Get a specific article. (TODO)');
+    Article.findById(req.params.id)
+        .exec((err, result) => {
+            if (err) return next(err);
+            res.json(result);
+        });
 }
 
 exports.article_post = [
     body('author').isLength({ min: 1, max: 100 }).escape(),
     body('title').isLength({ min: 1, max: 100 }).escape(),
-    body('text').isLength({ min: 1, max: 10000 }),
     (req, res, next) => {
         const errors = validationResult(req);
 

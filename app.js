@@ -9,9 +9,9 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-// Set up CORS
+// Set up CORS (Need to set URL to frontend)
 var corsOptions = {
-  origin: 'https://localhost',
+  origin: 'http://localhost:3001',
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));

@@ -11,7 +11,7 @@ var app = express();
 
 // Set up CORS (Need to set URL to frontend)
 var corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: 'https://ne0rad.github.io/blog_frontend/',
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));

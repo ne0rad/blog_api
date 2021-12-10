@@ -2,7 +2,7 @@ const { body, validationResult } = require('express-validator');
 var Article = require('../models/article');
 
 exports.all_articles_get = function (req, res, next) {
-    Article.find({})
+    Article.find({}, {title : 1, author: 1, date: 1 })
         .sort({ date: -1 })
         .exec((err, result) => {
             if (err) return next(err);

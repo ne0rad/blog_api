@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
     article: { type: Schema.Types.ObjectId, ref: 'Article' },
-    message: { type: String, required: true, minlength: 1, maxlength: 1000 },
-    author: { type: String, required: true, minlength: 1, maxlength: 100 },
+    comment: { type: String, required: true, minlength: 1, maxlength: 1000 },
+    name: { type: String, required: true, minlength: 1, maxlength: 100 },
     date: { type: Date, required: true }
 });
 

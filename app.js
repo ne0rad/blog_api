@@ -11,7 +11,7 @@ var app = express();
 
 // Set up CORS (Need to set URL to frontend)
 var corsOptions = {
-  origin: 'https://ne0rad.github.io/blog_frontend/',
+  origin: 'https://ne0rad.github.io',
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));

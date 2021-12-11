@@ -13,7 +13,7 @@ exports.all_articles_get = function (req, res, next) {
 exports.article_get = function (req, res, next) {
     Article.findById(req.params.id)
         .exec((err, result) => {
-            if (err) return next(err);
+            if (err) return res.sendStatus(404);
             res.json(result);
         });
 }

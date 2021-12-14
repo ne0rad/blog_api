@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var app = express();
 
 // Set up CORS (Need to set URL to frontend)
-var ORIGIN_URL = process.env.ORIGIN_URL || 'https://ne0rad.github.io';
+var ORIGIN_URL = process.env.ORIGIN_URL || ['https://ne0rad.github.io', 'https://3pvkr.csb.app'];
 var corsOptions = {
   origin: ORIGIN_URL,
   optionsSuccessStatus: 200
